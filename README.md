@@ -10,8 +10,8 @@ Interactive bilingual course companion for teaching agentic AI systems.
 - Randomized single-choice quiz for each chapter with instant scoring
 - Static frontend structure that can later connect to a database or CMS
 
-## Source and Copyright
+## Copyright
 
-This website is an instructional course companion inspired by *Building Agentic AI Systems: Create intelligent, autonomous AI agents that can reason, plan, and adapt* by Anjanava Biswas and Wrick Talukdar. It uses original explanations, teaching examples, diagrams, and quizzes, and does not reproduce the full book text.
+This website is an original instructional course site. It does not provide book files, external book-material links, or verbatim replacement content for any copyrighted source.
 
 Web course copyright © Gary Yu-Ho Yeh.

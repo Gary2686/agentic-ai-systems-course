@@ -400,9 +400,84 @@ h1 {
 .step-list p,
 .example-card p,
 .takeaway-list li,
-.reference p {
+.reference p,
+.module-card p,
+.misconception-item p,
+.practice-box p {
   color: var(--muted);
   line-height: 1.7;
+}
+
+.module-list {
+  display: grid;
+  gap: 14px;
+}
+
+.module-card {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: white;
+}
+
+.module-card strong {
+  display: block;
+  color: var(--blue);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.module-card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.module-card p {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.module-card ul,
+.misconception-list,
+.practice-box ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.module-card li,
+.misconception-item,
+.practice-box li {
+  margin-bottom: 7px;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 14px;
+}
+
+.misconception-item {
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+}
+
+.misconception-item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.misconception-item strong,
+.practice-box strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--ink);
+}
+
+.practice-box {
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--soft);
 }
 
 .step-list {
@@ -665,7 +740,8 @@ h1 {
   .stats-row,
   .two-column,
   .concept-map,
-  .example-grid {
+  .example-grid,
+  .module-card {
     grid-template-columns: 1fr;
   }
 

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Building Agentic AI Systems | Interactive Course Companion</title>
+    <meta
+      name="description"
+      content="A bilingual Traditional Chinese and English interactive course companion for learning agentic AI systems."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Course chapters">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" role="img">
+              <path d="M4 10.5 16 4l12 6.5-12 6.5L4 10.5Z" />
+              <path d="M8 14.5v7L16 26l8-4.5v-7" />
+              <path d="M16 17v9" />
+            </svg>
+          </div>
+          <div>
+            <strong>Building Agentic AI Systems</strong>
+            <span data-i18n="brandSub">互動式雙語教材</span>
+          </div>
+        </div>
+
+        <nav id="chapterNav" class="chapter-nav"></nav>
+
+        <a class="download-link" href="#reference">
+          <span aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v3h16v-3" /></svg>
+          </span>
+          <span data-i18n="referenceNav">參考來源與版權</span>
+        </a>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <button class="icon-button menu-button" id="menuButton" aria-label="Toggle chapters">
+            <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+          </button>
+          <div class="language-switch" role="group" aria-label="Language">
+            <button id="zhButton" class="active" type="button">繁中</button>
+            <button id="enButton" type="button">EN</button>
+          </div>
+          <div class="progress-wrap">
+            <span data-i18n="progress">學習進度</span>
+            <strong id="progressText">0%</strong>
+            <div class="progress-bar" aria-hidden="true"><span id="progressBar"></span></div>
+          </div>
+        </header>
+
+        <section class="lesson-layout">
+          <article class="lesson">
+            <div class="chapter-kicker" id="partLabel"></div>
+            <h1 id="chapterTitle"></h1>
+            <p class="lead" id="chapterLead"></p>
+
+            <div class="stats-row" id="statsRow"></div>
+
+            <section class="panel">
+              <div class="panel-heading">
+                <h2 data-i18n="conceptMap">概念圖</h2>
+                <span data-i18n="conceptMapSub">Concept Map</span>
+              </div>
+              <div class="concept-map" id="conceptMap"></div>
+            </section>
+
+            <section class="two-column">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h2 data-i18n="definitions">核心定義</h2>
+                  <span data-i18n="definitionsSub">Key Definitions</span>
+                </div>
+                <div class="definition-list" id="definitions"></div>
+              </div>
+              <div class="panel">
+                <div class="panel-heading">
+                  <h2 data-i18n="steps">學習步驟</h2>
+                  <span data-i18n="stepsSub">Learning Steps</span>
+                </div>
+                <ol class="step-list" id="steps"></ol>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-heading">
+                <h2 data-i18n="examples">容易吸收的例子</h2>
+                <span data-i18n="examplesSub">Examples</span>
+              </div>
+              <div class="example-grid" id="examples"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-heading">
+                <h2 data-i18n="takeaways">章節重點</h2>
+                <span data-i18n="takeawaysSub">Takeaways</span>
+              </div>
+              <ul class="takeaway-list" id="takeaways"></ul>
+            </section>
+
+            <section id="reference" class="reference panel">
+              <div class="panel-heading">
+                <h2 data-i18n="referenceTitle">參考來源與版權</h2>
+                <span>Reference & Copyright</span>
+              </div>
+              <p id="referenceText"></p>
+            </section>
+          </article>
+
+          <aside class="quiz-panel">
+            <div class="quiz-card">
+              <div class="quiz-head">
+                <div>
+                  <h2 data-i18n="quizTitle">章末小測驗</h2>
+                  <span data-i18n="quizSub">Random single-choice quiz</span>
+                </div>
+                <strong id="quizProgress">1 / 5</strong>
+              </div>
+              <p class="quiz-question" id="quizQuestion"></p>
+              <div class="quiz-options" id="quizOptions"></div>
+              <div class="quiz-result" id="quizResult" hidden></div>
+              <button class="primary-button" id="nextQuiz" type="button" data-i18n="nextQuestion">
+                下一題
+              </button>
+              <button class="secondary-button" id="resetQuiz" type="button" data-i18n="resetQuiz">
+                重新測驗
+              </button>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
